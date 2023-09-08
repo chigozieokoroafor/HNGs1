@@ -8,10 +8,12 @@ app.get("/HNG/api", (req, res)=>{
     const {slack_name, track} = req.query;
     const date = new Date();
 
+    
+
     const data = {
         slack_name:slack_name,
-        current_day: date.getFullYear(),
-        utc_time: date,
+        current_day: date.toLocaleString('en-us', {  weekday: 'long' }),
+        utc_time: date.toISOString().replace(/.\d+Z$/g, "Z"),
         track:track,
         github_file_url: "https://github.com/chigozieokoroafor/HNGs1/blob/main/stage1/index.js",
         github_repo_url: "https://github.com/chigozieokoroafor/HNGs1",
