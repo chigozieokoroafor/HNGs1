@@ -22,7 +22,7 @@
   "devDependencies": {
     "nodemon": "^3.0.1"
   },
-  "name": "hms_backend",
+  "name": "HNG",
   "version": "1.0.0",
   "description": "HNG folder",
   "main": "index.js",
