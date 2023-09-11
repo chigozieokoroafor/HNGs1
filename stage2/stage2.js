@@ -75,7 +75,7 @@ route.put("/:user_id", async(req, res)=>{
         return res.send(data).status(400);
 
     } else{
-        const user = await Person.findOneAndUpdate({_id:user_id}, {"$set":req.body});
+        let user = await Person.findOneAndUpdate({_id:user_id}, {"$set":req.body});
         user = await user.save();
         // console.log(user)
         data.message = "";
